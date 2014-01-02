@@ -15,15 +15,12 @@ end
 
 
 minetest.register_chatcommand("allow", {
-	param = "",
+	param = "allow <nickname>",
+	privs = {basic_privs=true},
 	description = "Allows joining for specified nickname.",
 	func = function(name, param)
 		local player = minetest.get_player_by_name(name)
 		if not player then
-			return
-		end
-		if not minetest.check_player_privs(name, {basic_privs}) then
-			minetest.chat_send_player(name, "Hey "..name..", you are not allowed to use that command. Privs needed: basic_privs");
 			return
 		end
 		-- Handling parameter
@@ -40,15 +37,12 @@ minetest.register_chatcommand("allow", {
 })
 
 minetest.register_chatcommand("disallow", {
-	param = "",
+	param = "disallow <nickname>",
+	privs = {basic_privs=true},
 	description = "Disallows joining for specified nickname.",
 	func = function(name, param)
 		local player = minetest.get_player_by_name(name)
 		if not player then
-			return
-		end
-		if not minetest.check_player_privs(name, {basic_privs}) then
-			minetest.chat_send_player(name, "Hey "..name..", you are not allowed to use that command. Privs needed: basic_privs");
 			return
 		end
 		-- Handling parameter
