@@ -11,3 +11,5 @@ Commands:
 
 /allow <nickname> - permits login for <nickname>
 /disallow <nickname> - refuse login for <nickname
+
+Licence: WTFPL
