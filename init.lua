@@ -63,7 +63,7 @@ minetest.register_chatcommand("disallow", {
 minetest.register_on_prejoinplayer(function(name, ip)
 	local joining = config:get_bool(name)
 	if joining == nil or joining == false then
-		minetest.chat_send_all("-!- Server "..name.." tried to join server.")
+		minetest.chat_send_all("Server -!- "..name.." tried to join server.")
 		return "Sorry you need permission to join this server."
 	end
 end)
