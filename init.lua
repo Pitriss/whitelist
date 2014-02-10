@@ -15,7 +15,7 @@ end
 
 
 minetest.register_chatcommand("allow", {
-	param = "allow <nickname>",
+	params = "<nickname>",
 	privs = {basic_privs=true},
 	description = "Allows joining for specified nickname.",
 	func = function(name, param)
@@ -37,7 +37,7 @@ minetest.register_chatcommand("allow", {
 })
 
 minetest.register_chatcommand("disallow", {
-	param = "disallow <nickname>",
+	params = "<nickname>",
 	privs = {basic_privs=true},
 	description = "Disallows joining for specified nickname.",
 	func = function(name, param)
